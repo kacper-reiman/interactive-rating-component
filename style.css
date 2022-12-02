@@ -42,11 +42,15 @@ section {
   justify-content: space-around;
   padding: 2rem;
   border-radius: 2rem;
+  animation: grow 1s normal cubic-bezier(0.22, 0.61, 0.36, 1);
 }
 
 #star__icon {
   box-sizing: border-box;
   max-width: 1rem;
+}
+#star__icon:hover {
+  animation: spin 2s linear infinite;
 }
 
 h2.header {
@@ -117,6 +121,9 @@ p.text {
   padding: 0.6rem;
   border-radius: 1rem;
 }
+#rating__container {
+  color: var(--clr__neutral__100);
+}
 .hidden {
   display: none;
 }
@@ -135,4 +142,23 @@ p.text {
 }
 .attribution a {
   color: var(--clr__primary__400);
+}
+/* ANIMATION */
+
+@keyframes grow {
+  0% {
+    transform: scale(0.1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
 }
