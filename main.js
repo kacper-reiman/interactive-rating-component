@@ -27,8 +27,9 @@ ratingButton.forEach((rate) => {
       ratingSection.classList.add("hidden");
     });
     goBack.addEventListener("click", () => {
-      thanksSection.classList.add("hidden");
-      ratingSection.classList.remove("hidden");
+      document.location.reload();
+      // thanksSection.classList.add("hidden");
+      // ratingSection.classList.remove("hidden");
     });
   });
 });
